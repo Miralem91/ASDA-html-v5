@@ -56,7 +56,7 @@ hr {
     background-size: cover;
     width: 100px;
     height: 100px;
-    z-index:3;
+    pointer-events: all ;
 }
 
 .clicked {
