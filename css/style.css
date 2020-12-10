@@ -62,8 +62,8 @@ hr {
 .clicked {
     background: url('../assets/images/gift_x.png') !important;
     background-size: cover;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     pointer-events: none;
 }
 
