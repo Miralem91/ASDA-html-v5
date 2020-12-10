@@ -64,7 +64,7 @@ hr {
     background-size: cover;
     width: 100px;
     height: 100px;
-    pointer-events: none !important;
+    pointer-events: none;
 }
 
 .wrapper {
