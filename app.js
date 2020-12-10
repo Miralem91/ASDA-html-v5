@@ -5,7 +5,7 @@ class ImageLoop {
         this.imgWrappers = document.querySelectorAll('.wrapper');
         this.trigger = document.querySelectorAll('.gift-image-bg');
         this.container = document.getElementById('#content');
-        this.target = 'winner';
+        this.target = 'https://github.com/Miralem91/ASDA-html-v5/blob/main/winner.html';
         this.click = 0;
     }
 
@@ -25,11 +25,14 @@ class ImageLoop {
         this.click++;
         console.log(this.click);
         if (this.click == 2) {
+
+            this.classList.remove('clicked');
+            this.classList.add('gift-image-bg');
             function trigger() {
                 imageLoop.container = $('#content');
                 imageLoop.target ='winner';
                 console.log(imageLoop.target);
-                imageLoop.container.load(imageLoop.target + '.html');
+                imageLoop.container.load('https://github.com/Miralem91/ASDA-html-v5/blob/main/winner.html');
                 //Load content
                 //stop normal link behaviour
                 return false;
