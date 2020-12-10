@@ -29,7 +29,7 @@ class ImageLoop {
                 imageLoop.container = $('#content');
                 imageLoop.target ='winner';
                 console.log(imageLoop.target);
-                imageLoop.container.load('https://github.com/Miralem91/ASDA-html-v5/blob/main/winner.html');
+                imageLoop.container.load('winner.html');
                 //Load content
                 //stop normal link behaviour
                 return false;
