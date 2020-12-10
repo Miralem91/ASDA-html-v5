@@ -65,7 +65,7 @@ hr {
     width: 100px;
     height: 100px;
     pointer-events: none;
-    z-index:2;
+    z-index:3;
 }
 
 .wrapper {
