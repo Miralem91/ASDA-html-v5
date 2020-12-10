@@ -1,66 +1,149 @@
-class ImageLoop {
-    constructor() {
-        this.images = document.querySelectorAll('.gift-image-bg');
-        this.clicked = document.querySelectorAll('.clicked');
-        this.imgWrappers = document.querySelectorAll('.wrapper');
-        this.trigger = document.querySelectorAll('.gift-image-bg');
-        this.container = document.getElementById('#content');
-        this.target = 'https://github.com/Miralem91/ASDA-html-v5/blob/main/winner.html';
-        this.click = 0;
-    }
-
-
-    openPage() {
-        this.click++;
-        if (this.click % 2 == 0) {
-            // console.log('newPage added!');
-        } else if (this.click = 1) {
-            this.classList.add('clicked');
-            this.classList.remove('gift-image-bg');
-        }
-        console.log(this.click);
-    }
-
-    clickOnWrapper() {
-        this.click++;
-        console.log(this.click);
-        if (this.click == 2) {
-
-            this.classList.remove('clicked');
-            this.classList.add('gift-image-bg');
-            function trigger() {
-                imageLoop.container = $('#content');
-                imageLoop.target ='winner';
-                console.log(imageLoop.target);
-                imageLoop.container.load('https://github.com/Miralem91/ASDA-html-v5/blob/main/winner.html');
-                //Load content
-                //stop normal link behaviour
-                return false;
-            };
-
-            trigger();
-        } else {
-            console.log('page-not-loaded');
-        }
-    };
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed';
 }
 
+hr {
+    min-width: 360px;
+}
 
+#top-nav {
+    background-color: #57ba21;
+    margin-top: 10px;
+}
 
+.logo-container {
+    padding: 20px 20px;
+    width: 50%;
+    margin: 0 auto;
+}
 
+.logo-container img {
+    width: 100%;
+    margin: 0 auto;
+}
 
-const imageLoop = new ImageLoop();
+.welcome-heading {
+    font-weight: 600;
+    line-height: 0.2;
+}
 
-imageLoop.images.forEach(image => {
-    image.addEventListener("click", imageLoop.openPage);
-    image.addEventListener("click", imageLoop.trigger);
-});
+#offer-box {
+    background-color: #ececec;
+    border-radius: 5px;
+    padding: 3px;
+}
 
+#offer-box p {
+    font-size: 0.9rem;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-weight: 650;
+    color: #555555;
+}
 
-imageLoop.imgWrappers.forEach(wrapper => {
-    wrapper.addEventListener("click", () => {
-        imageLoop.clickOnWrapper();
+.red-text {
+    color: #d70000;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 
-    });
-});
+.gift-image-bg {
+    background: url('../assets/images/gift.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.clicked {
+    background: url('../assets/images/gift_X.png') !important;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    pointer-events: none !important;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#images {
+    display: flex;
+    justify-content: space-between;
+}
+
+#images a img {
+    width: 80%;
+}
+
+#images a img:hover {
+    width: 80%;
+    transform: scale(1.2);
+}
+
+.congrats-text-div {
+    text-align: center;
+}
+
+.hero-image-wrapper {
+    width: 100%;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+}
+
+.call-to-action {
+    background-color: #ececec;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.call-to-action p {
+    font-weight: 600;
+    color: #555555;
+    font-size: 80%;
+}
+
+.call-to-action button {
+    font-weight: 600;
+    color: white;
+    background-color: #5d76aa;
+    width: 100%;
+}
+
+.gift-png {
+    width: 5%;
+}
+
+.arrow {
+    height: 2px;
+    width: 2px !important;
+}
+
+#footer {
+    display: flex;
+}
+
+#footer img {
+    width: 90%;
+}
+
+#footer p {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#bottom-section {
+    background-color: #ececec;
+    color: #555555;
+    font-size: 10px;
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+}
