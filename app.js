@@ -25,9 +25,6 @@ class ImageLoop {
         this.click++;
         console.log(this.click);
         if (this.click == 2) {
-
-            this.classList.remove('clicked');
-            this.classList.add('gift-image-bg');
             function trigger() {
                 imageLoop.container = $('#content');
                 imageLoop.target ='winner';
